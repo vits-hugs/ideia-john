@@ -1,0 +1,17 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; background: #05060d; overflow: hidden; }
+body { display: flex; align-items: center; justify-content: center; }
+#wrap { position: relative; width: min(100vw, calc(100vh * 1.2)); }
+canvas {
+  display: block; width: 100%; height: auto; aspect-ratio: 768 / 640;
+  background: #000; touch-action: none; image-rendering: auto;
+  box-shadow: 0 0 40px rgba(60, 90, 200, .35);
+}
+#touchui { display: none; position: absolute; left: 0; right: 0; bottom: 8px; padding: 0 12px; justify-content: space-between; pointer-events: none; }
+#touchui button {
+  pointer-events: auto; font: bold 14px "Trebuchet MS", sans-serif; color: #fff;
+  background: rgba(20, 30, 70, .7); border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 50%; width: 64px; height: 64px; touch-action: none; user-select: none;
+}
+#btnPause { width: 44px !important; height: 44px !important; align-self: flex-start; }
+@media (pointer: coarse) { #touchui { display: flex; } }
